@@ -1,0 +1,13 @@
+traffic_light.c:10:6:OffAll1	8	static
+traffic_light.c:15:6:OffAll2	8	static
+traffic_light.c:20:6:OnLedRed1	8	static
+traffic_light.c:25:6:OnLedRed2	8	static
+traffic_light.c:30:6:OnLedYellow1	8	static
+traffic_light.c:35:6:OnLedYellow2	8	static
+traffic_light.c:40:6:OnLedGreen1	8	static
+traffic_light.c:45:6:OnLedGreen2	8	static
+traffic_light.c:52:6:BlinkyLedRed	8	static
+traffic_light.c:56:6:BlinkyLedYellow	8	static
+traffic_light.c:60:6:BlinkyLedGreen	8	static
+traffic_light.c:64:6:BlinkyLed	16	static
+traffic_light.c:98:6:System_Initilization	8	static
