@@ -2859,7 +2859,7 @@ unsigned char SCH_Delete_Task(uint32_t ID) {
  8001420:	d901      	bls.n	8001426 <SCH_Delete_Task+0x26>
 		 //Error_code_G = ERROR_SCH_CANNOT_DELETE_TASK
 		return RETURN_ERROR;
- 8001422:	2301      	movs	r3, #1
+ 8001422:	2300      	movs	r3, #0
  8001424:	e027      	b.n	8001476 <SCH_Delete_Task+0x76>
 	}
 	SCH_tasks_G[ID].pTask = 0x0000;
@@ -2906,7 +2906,7 @@ unsigned char SCH_Delete_Task(uint32_t ID) {
  8001470:	2200      	movs	r2, #0
  8001472:	701a      	strb	r2, [r3, #0]
 	return RETURN_NORMAL; // return status
- 8001474:	2300      	movs	r3, #0
+ 8001474:	2301      	movs	r3, #1
 }
  8001476:	4618      	mov	r0, r3
  8001478:	370c      	adds	r7, #12

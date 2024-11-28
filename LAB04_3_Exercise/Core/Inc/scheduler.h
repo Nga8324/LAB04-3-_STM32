@@ -9,8 +9,8 @@
 #define INC_SCHEDULER_H_
 #include <stdint.h>
 #define TICK 			10
-#define RETURN_ERROR 	1
-#define RETURN_NORMAL 	0
+#define RETURN_ERROR 	0
+#define RETURN_NORMAL 	1
 typedef struct{
 	void (*pTask)(void);		//con trỏ gọi đến task khi trừ delay + period
 	uint32_t 	Delay;
