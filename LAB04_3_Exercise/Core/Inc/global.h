@@ -47,4 +47,9 @@ extern int value;
 extern int STATUS_MODE;
 extern int STATUS_BLINKY;
 
+extern int counter_2;
+extern int counter_3;
+extern int counter_4;
+extern int counter_5;
+
 #endif /* INC_GLOBAL_H_ */

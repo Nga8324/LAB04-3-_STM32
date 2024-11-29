@@ -106,12 +106,11 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   SCH_Add_Task(leddebug, 0, 500);
-  SCH_Add_Task(timerRun, 1, 10);
-  SCH_Add_Task(getKeyInput, 2, 10);
-  SCH_Add_Task(fsm_setting_run, 3, 10);
-  SCH_Add_Task(fsm_automatic_run, 4, 10);
-  SCH_Add_Task(fsm_manual_run, 5, 10);
+  SCH_Add_Task(getKeyInput, 1, 10);
 
+  SCH_Add_Task(fsm_setting_run, 2, 10);
+  SCH_Add_Task(fsm_automatic_run, 3, 10);
+  SCH_Add_Task(fsm_manual_run, 4, 10);
   //STATUS_7SEG = INIT;
   //STATUS_MODE = MODE1;
   //STATUS_MODE = MODE2;
@@ -269,10 +268,8 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-	//timerRun();
-	//getKeyInput();
 	SCH_Update();
-
+//	getKeyInput();
 }
 
 

@@ -27,3 +27,7 @@ int TimeForLed2 = 3;
 
 int value = 0;
 
+int counter_2 = 100;
+int counter_3 = 100;
+int counter_4 = 25;
+int counter_5 = 25;

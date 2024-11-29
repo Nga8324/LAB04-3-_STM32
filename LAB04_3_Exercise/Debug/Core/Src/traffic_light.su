@@ -10,4 +10,4 @@ traffic_light.c:52:6:BlinkyLedRed	8	static
 traffic_light.c:56:6:BlinkyLedYellow	8	static
 traffic_light.c:60:6:BlinkyLedGreen	8	static
 traffic_light.c:64:6:BlinkyLed	16	static
-traffic_light.c:98:6:System_Initilization	8	static
+traffic_light.c:111:6:System_Initilization	8	static

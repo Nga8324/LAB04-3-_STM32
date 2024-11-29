@@ -67,28 +67,41 @@ void BlinkyLed(int led){
 		OffAll1();
 		OffAll2();
 
-		setTimer(4, 250);
+		//setTimer(4, 250);
+		counter_4 = 25;
 		if(led == RED) STATUS_BLINKY = RED;
 		if(led == YELLOW) STATUS_BLINKY = YELLOW;
 		if(led == GREEN) STATUS_BLINKY = GREEN;
 		break;
 	case RED:
-		if(timer_flag[4] == 1){
-			setTimer(4, 250);
+		//if(timer_flag[4] == 1){
+			//setTimer(4, 250);
+		if(counter_4 <= 0){
 			BlinkyLedRed();
+			counter_4 = 25;
 		}
+		else counter_4 --;
+		//}
 		break;
 	case YELLOW:
-		if(timer_flag[4] == 1){
-			setTimer(4, 250);
+		//if(timer_flag[4] == 1){
+			//setTimer(4, 250);
+		if(counter_4 <= 0){
 			BlinkyLedYellow();
+			counter_4 = 25;
 		}
+		else counter_4 --;
+		//}
 		break;
 	case GREEN:
-		if(timer_flag[4] == 1){
-			setTimer(4, 250);
+		//if(timer_flag[4] == 1){
+			//setTimer(4, 250);
+		if(counter_4 <= 0){
 			BlinkyLedGreen();
+			counter_4 = 25;
 		}
+		else counter_4 --;
+		//}
 		break;
 	default:
 		break;

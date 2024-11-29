@@ -12,12 +12,12 @@
 #define RETURN_ERROR 	0
 #define RETURN_NORMAL 	1
 typedef struct{
-	void (*pTask)(void);		//con trỏ gọi đến task khi trừ delay + period
+	void (*pTask)(void);
 	uint32_t 	Delay;
 	uint32_t	Period;
-	uint8_t		RunMe;			// Số lần nhiệm vụ thực thi
+	uint8_t		RunMe;
 
-	uint32_t	TaskID;			// Hiện thực tác vụ
+//	uint32_t	TaskID;			// Hiện thực tác vụ
 }sTasks;
 
 #define SCH_MAX_TASKS		40
