@@ -114,7 +114,6 @@ void fsm_automatic_run(){
 				TimeForLed2 = TimeGreen;
 				STATUS_LED2 = AUTO_GREEN2;
 			}
-
 	    }
 		//}
 		break;
@@ -137,7 +136,6 @@ void fsm_automatic_run(){
 			}
 
 	   }
-
 		//}
 		break;
 	case AUTO_YELLOW2:

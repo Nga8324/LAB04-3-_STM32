@@ -110,6 +110,7 @@ int main(void)
 
   SCH_Add_Task(fsm_setting_run, 2, 10);
   SCH_Add_Task(fsm_automatic_run, 3, 10);
+  //SCH_Add_Task(display_led7seg, 5, 250);
   SCH_Add_Task(fsm_manual_run, 4, 10);
   //STATUS_7SEG = INIT;
   //STATUS_MODE = MODE1;

@@ -31,3 +31,4 @@ int counter_2 = 100;
 int counter_3 = 100;
 int counter_4 = 25;
 int counter_5 = 25;
+int counter_6 = 25;

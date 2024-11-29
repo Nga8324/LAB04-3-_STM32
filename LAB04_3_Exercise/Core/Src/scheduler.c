@@ -9,7 +9,6 @@
 sTasks SCH_tasks_G[SCH_MAX_TASKS];
 
 void SCH_Init(void) {
-	//current_index_task = 0;						// 0->current_index_task
 	unsigned char i;
 	for (i = 0; i < SCH_MAX_TASKS; i++) {
 		SCH_Delete_Task (i);
@@ -24,7 +23,7 @@ void SCH_Update(void) {
 		if (SCH_tasks_G[i].pTask) {
 			if (SCH_tasks_G[i].Delay <= 0) {
 				SCH_tasks_G[i].RunMe ++;
-				if (SCH_tasks_G[i].Period) {	 	// Co lap
+				if (SCH_tasks_G[i].Period) {
 					SCH_tasks_G[i].Delay = SCH_tasks_G[i].Period;
 				}
 			}else {
@@ -35,13 +34,13 @@ void SCH_Update(void) {
 }
 
 unsigned char SCH_Add_Task(void (*pFunction)(),  unsigned int DELAY,  unsigned int PERIOD) {
+	// find gap
 	unsigned char i = 0;
 	while ((SCH_tasks_G[i].pTask != 0) && (i < SCH_MAX_TASKS)) {
 		i++;
 	}
-	// Khong tim thay vi tri trong
+	// Not find gap
 	if (i == SCH_MAX_TASKS) {
-		//Error_code_G=ERROR_SCH_TOO_MANY_TASKS;
 		return SCH_MAX_TASKS;
 	}
 	SCH_tasks_G[i].pTask = pFunction;
@@ -56,8 +55,8 @@ unsigned char SCH_Add_Task(void (*pFunction)(),  unsigned int DELAY,  unsigned i
 void SCH_Dispatch_Tasks(void) {
 	unsigned char i;
 	for (i = 0; i < SCH_MAX_TASKS; i++) {
-		if (SCH_tasks_G[i].RunMe > 0) { 			// nhu kiem tra flag
-			(*SCH_tasks_G[i].pTask)(); 				// tro den nhiem vu cu the
+		if (SCH_tasks_G[i].RunMe > 0) {
+			(*SCH_tasks_G[i].pTask)();
 			SCH_tasks_G[i].RunMe--;
 
 			// ONE-SHOT
@@ -66,8 +65,7 @@ void SCH_Dispatch_Tasks(void) {
 			}
 		}
 	}
-	 //SCH_Report_Status();// Report system status
-	 //SCH_Go_To_Sleep();// The scheduler enters idlemode at this point
+
 }
 
 unsigned char SCH_Delete_Task(uint32_t ID) {
@@ -79,13 +77,8 @@ unsigned char SCH_Delete_Task(uint32_t ID) {
 	SCH_tasks_G[ID].Delay = 0;
 	SCH_tasks_G[ID].Period = 0;
 	SCH_tasks_G[ID].RunMe = 0;
-	return RETURN_NORMAL; // return status
+	return RETURN_NORMAL;
 }
-//void SCH_Go_To_Sleep(void)
-//{
-//	HAL_SuspendTick();
-//	HAL_PWR_EnterSLEEPMode(PWR_MAINREGULATOR_ON, PWR_SLEEPENTRY_WFI);
-//	HAL_ResumeTick();
-//}
+
 
 

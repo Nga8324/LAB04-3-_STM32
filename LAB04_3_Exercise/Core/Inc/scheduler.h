@@ -27,9 +27,9 @@ unsigned char  SCH_Add_Task (void (*pFunction)(),
 							unsigned int DELAY,
 							unsigned int PERIOD);
 
-void SCH_Update(void);			// Như timerrun
+void SCH_Update(void);
 
-void SCH_Dispatch_Tasks(void);	// Kiểm tra 1 flag, gọi trong while(1)
+void SCH_Dispatch_Tasks(void);
 
 unsigned char SCH_Delete_Task(uint32_t ID);
 //void SCH_Go_To_Sleep(void);

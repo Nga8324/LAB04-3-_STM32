@@ -51,5 +51,5 @@ extern int counter_2;
 extern int counter_3;
 extern int counter_4;
 extern int counter_5;
-
+extern int counter_6;
 #endif /* INC_GLOBAL_H_ */
